@@ -72,7 +72,7 @@ if uploaded_file is not None:
    
     # Display input image
     placeholder[0].text("Input Image")
-    placeholder[0].image(photo)
+    placeholder[0].image(photo[:, :, ::-1])
 
     # Convert to grayscale
     grayscale_photo = convert_to_grayscale(photo)
